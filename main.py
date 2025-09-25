@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import httpx
 import time
 import logging
@@ -26,7 +24,7 @@ async def get_access_token():
         return access_token_cache["token"]
     
     logging.info("Access Token: Fetching new token...")
-    url = f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid= {WECOM_CORP_ID}&corpsecret={WECOM_SECRET}"
+    url = f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=  {WECOM_CORP_ID}&corpsecret={WECOM_SECRET}"
     try:
         async with httpx.AsyncClient() as client:
             response = await client.get(url)
@@ -56,7 +54,7 @@ class TransferToAgentPlugin(BasePlugin):
             self.ap.logger.error("查询会话状态失败：无法获取 access_token。")
             return -1
 
-        api_url = f"https://qyapi.weixin.qq.com/cgi-bin/kf/service_state/get?access_token= {token}"
+        api_url = f"https://qyapi.weixin.qq.com/cgi-bin/kf/service_state/get?access_token=  {token}"
         payload = {"open_kfid": OPEN_KFID, "external_userid": user_id}
         try:
             async with httpx.AsyncClient() as client:
@@ -118,7 +116,7 @@ class TransferToAgentPlugin(BasePlugin):
             ctx.prevent_default()
             return
 
-        api_url = f"https://qyapi.weixin.qq.com/cgi-bin/kf/service_state/trans?access_token= {token}"
+        api_url = f"https://qyapi.weixin.qq.com/cgi-bin/kf/service_state/trans?access_token=  {token}"
         payload = {"open_kfid": OPEN_KFID, "external_userid": user_id, "service_state": 2}
         try:
             async with httpx.AsyncClient() as client:
