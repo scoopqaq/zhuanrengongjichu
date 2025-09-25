@@ -9,9 +9,9 @@ from pkg.platform.types import *
 
 # --- 1. 配置信息 ---
 # ====================================================================
-OPEN_KFID = "wk7m0ECAAAJIe_OYgcBEt5hGxXFrbqUA"
-WECOM_CORP_ID = "ww490150746d039eda"
-WECOM_SECRET = "iYNQBMi9vjFQsN6YM3opk1yCVdKfr_pGK_NVHkaBLJE"
+OPEN_KFID = "wk1IEjWwAAzJpTMscnWXxttzvt8HQ1jw"
+WECOM_CORP_ID = "ww9539a0a178d52277"
+WECOM_SECRET = "ExcFX0jYD4J8flVmQ9cE9xsIec66P5qT79nnWez2Dx8"
 # ====================================================================
 
 
